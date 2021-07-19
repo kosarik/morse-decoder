@@ -38,7 +38,7 @@ const MORSE_TABLE = {
 };
 
 function decode(expr) {
-  let morseLetter; let o;
+  let morseLetter; let result;
   if (expr.length < 10) {
     expr.padStart(10, "0");
   }
@@ -54,7 +54,7 @@ function decode(expr) {
       morseLetter += morseBy2[j];
     }
     morseLetter.toString();
-    result += MORSE_TABLE.r;
+    result += MORSE_TABLE.morseLetter;
   }
   return result;
 }
